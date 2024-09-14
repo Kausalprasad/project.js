@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="Language">
+        <li>Java Script</li>
+    </ul>
+    
+</body>
+<script>
+    // let a=document.createElement("h1")
+    // console.log(a)
+    // a.className="main"
+    // a.id=Math.round(Math.random()*10+1)
+    // a.setAttribute("tittle","CreatedTittle")
+    // a.style.background="green"
+    // a.style.padding="45px"
+    // // a.innerText="kaushal is my name "
+    // const addtext=document.createTextNode("Kaushal heyy")
+    // a.appendChild(addtext)
+    // document.body.appendChild(a)
+    function addText(addlang){
+        let li=document.createElement("li")
+        li.innerHTML=addlang;
+     let add=   document.querySelector(".Language")
+     add.appendChild(li)
+    }
+    addText("Python");
+    addText("C++");
+
+    function  addtextOptmize(addlang) {
+        let li=document.createElement("li");
+        li.appendChild(document.createTextNode(addlang))
+        document.querySelector(".Language").appendChild(li)
+     
+
+    }
+    addtextOptmize("java")
+    addtextOptmize("typeScript")
+   
+   let secoundLang=document.querySelector("li:nth-child(2)");
+//    console.log(secoundLang)
+   let newLi=document.createElement("li")
+   newLi.textContent="kaushal";
+   secoundLang.replaceWith(newLi)
+
+   let threeElemt=document.querySelector("li:nth-child(5)")
+    threeElemt.outerHTML="<li> ketan </li>"
+   let lastElemnt=document.querySelector("li:last-child")
+     lastElemnt.remove()
+</script>
+</html>

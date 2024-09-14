@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+     body {
+    height: 100vh; 
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+#wrap {
+    text-align: center; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.GuessField,
+.SubmmitBtn {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.SubmmitBtn {
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    cursor:pointer;
+}
+
+#guess {
+    font-size: 50px;
+}
+
+.resultparas {
+    font-size: 30px;
+}
+
+
+    
+    </style> 
+  
+</head>
+<body>
+    <div id="wrap">
+        <h1>Guess The Number</h1>
+        <p>Try and the the number 1 to 100</p>
+        <p>You have 10 attemped to guess the number</p>
+  <br>
+        <form >
+            <label for="guessFiled" id="guess">Guess a Number</label>
+            <input type="text"  id="GuessField" class="GuessField">
+            <input type="text"  id="SubmmitBtn" class="SubmmitBtn" value="submit guess">
+        </form>
+
+        <div class="resultparas">
+            <p>Previous Guess: <span class="guess"></span>  </p>
+            <p>Guess Reamning: <span class="lastResult">10</span>  </p>
+            <p class="LowHI"></p>
+          
+        </div>
+    </div>
+
+     <script src="guess.theNumber.js"></script>
+</body>
+</html>
