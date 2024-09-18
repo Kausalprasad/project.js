@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        /* display: flex; */
+
+    }
+    .button{
+       display: flex;
+       height: 100vh;
+       gap: 20px;
+       justify-content: center;
+       align-items: center;
+    }
+  
+</style>
+<body>
+    <div id="backgroundColor">
+  
+</div>
+<div class="button">
+<button class="btn" id="stop">STOP</button>
+<button class="btn" id="start">START</button>
+</div>
+
+
+
+    <script>
+    let a=function(){
+        document.querySelector("body").style.backgroundColor="red";
+        console.log("Start")
+    }
+    let id;
+  
+    let start=document.querySelector("#start").addEventListener('click',function(){
+      
+       id= setInterval(a,2000)
+    })
+
+    document.querySelector("#stop").addEventListener('click',function(){
+        clearInterval(id);
+        console.log("stop")
+    })
+    
+
+
+// let a=function(){
+   
+//     document.querySelector("h1").innerHTML="Ketan bhai"
+// }
+// let clear= setTimeout(a,2000);
+// document.querySelector("#stop").addEventListener('click',function(){
+//     clearTimeout(clear);
+//     console.log("STOPED")
+    
+// })
+
+
+        
+    </script>
+</body>
+</html>
